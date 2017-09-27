@@ -1,0 +1,19 @@
+﻿
+@model try_dropdown.Models.CityModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    <label>
+        Select City
+    </label>
+        @Html.DropDownList("CityName", (IEnumerable<SelectListItem>)ViewBag.cityList);
+
+    <p>
+        <input type="Submit" value="Submit" />
+    </p>
+}
